@@ -1,0 +1,16 @@
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.csproj.AssemblyReference.cache
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.GeneratedMSBuildEditorConfig.editorconfig
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.AssemblyInfoInputs.cache
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.AssemblyInfo.cs
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.csproj.CoreCompileInputs.cache
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\Feladat11.exe
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\Feladat11.deps.json
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\Feladat11.runtimeconfig.json
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\Feladat11.dll
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\ref\Feladat11.dll
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\Feladat11.pdb
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.dll
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\ref\Feladat11.dll
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.pdb
+E:\Repos\OEPBeadando\Feladat11\obj\Debug\net6.0\Feladat11.genruntimeconfig.cache
+E:\Repos\OEPBeadando\Feladat11\bin\Debug\net6.0\Input.txt
