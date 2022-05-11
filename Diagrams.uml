@@ -690,7 +690,7 @@
 <XPD:ATTR name="Left" type="integer">584</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">344</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">113</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">134</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">147</XPD:ATTR>
 <XPD:REF name="Model">e4vSmSbkA0Cmcc/A95SdNwAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="fJQXGbViN0W3+4owT1aeWgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="rOZPmikt/ESgnj07H4tKfwAA">
@@ -714,7 +714,7 @@
 <XPD:OBJ name="OwnedViews[22]" type="UMLDependencyView" guid="FMZEnb5GC0e/1fXLIDB7bgAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">639,277;640,344</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">639,277;639,344</XPD:ATTR>
 <XPD:REF name="Model">iz3fym3pLUGKiksz4WTBKwAA</XPD:REF>
 <XPD:REF name="Head">t5racmc920ulViClz6Q4bwAA</XPD:REF>
 <XPD:REF name="Tail">DNpYby7cNUm+dHmXzwJ7OwAA</XPD:REF>
@@ -740,7 +740,7 @@
 <XPD:OBJ name="OwnedViews[23]" type="UMLDependencyView" guid="gS1SS/EVY0GzZz8HfSQJEQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">909,213;696,369</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">912,213;696,375</XPD:ATTR>
 <XPD:REF name="Model">x0XnGVrCsEWSF8FrnxkWZwAA</XPD:REF>
 <XPD:REF name="Head">t5racmc920ulViClz6Q4bwAA</XPD:REF>
 <XPD:REF name="Tail">99WJ6/zbdk+dOO3nsQNoygAA</XPD:REF>
@@ -2123,7 +2123,7 @@
 <XPD:REF name="SupplierDependencies[1]">x0XnGVrCsEWSF8FrnxkWZwAA</XPD:REF>
 <XPD:ATTR name="#TypedParameters" type="integer">1</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">fMdfSWz5uEiA8mKxgvnYngAA</XPD:REF>
-<XPD:ATTR name="#Literals" type="integer">6</XPD:ATTR>
+<XPD:ATTR name="#Literals" type="integer">7</XPD:ATTR>
 <XPD:OBJ name="Literals[0]" type="UMLEnumerationLiteral" guid="WUqhnA7Lm0u0iT4Wo1LScwAA">
 <XPD:ATTR name="Name" type="string">Hobagoly = 4</XPD:ATTR>
 <XPD:REF name="Enumeration">e4vSmSbkA0Cmcc/A95SdNwAA</XPD:REF>
@@ -2146,6 +2146,10 @@
 </XPD:OBJ>
 <XPD:OBJ name="Literals[5]" type="UMLEnumerationLiteral" guid="bZcoL2uA/kCKg4YaZNTYSgAA">
 <XPD:ATTR name="Name" type="string">Lemming = 0</XPD:ATTR>
+<XPD:REF name="Enumeration">e4vSmSbkA0Cmcc/A95SdNwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Literals[6]" type="UMLEnumerationLiteral" guid="Oa7/p6zn3EGEQ2qX46hoTwAA">
+<XPD:ATTR name="Name" type="string">OsszesFaj = 6</XPD:ATTR>
 <XPD:REF name="Enumeration">e4vSmSbkA0Cmcc/A95SdNwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>

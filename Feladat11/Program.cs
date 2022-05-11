@@ -27,11 +27,7 @@
             Kiir(kor++);
             while (!RagadozokKisebbMintNegy() && !(SumRagadozoEgyedszam() >= 2 * sum))
             {
-                for(int i=0;i<Elovilag.Current().Koloniak().Count;i++)
-                {
-                    Kolonia kolonia = Elovilag.Current().Koloniak()[i];
-                    kolonia.Cselekszik(kor);
-                }
+                Elovilag.Current().KortVegrehajt(kor);
                 Kiir(kor++);
             }
         }

@@ -9,6 +9,10 @@
         public override void Cselekszik(int kor)
         {
             base.Cselekszik(kor);
+            if (Egyedszam() <= 0)
+            {
+                return;
+            }
             Zsakmany? zs = ZsakmanytKeres();
             ZsakmanytMegtamad(zs);
         }
@@ -21,17 +25,16 @@
         private Zsakmany? ZsakmanytKeres()
         {
             Random rnd = new Random();
-            var list = Elovilag.Current().ZsakmanyKoloniak();
+            var list = Elovilag.Current().ZsakmanyKoloniak().Where(zs => zs.Egyedszam()>0).ToList();
             return (list.Count>0)?list[rnd.Next(list.Count)]:null;
         }
 
         private void ZsakmanytMegtamad(Zsakmany? zsakmany)
         {
             zsakmany?.Reagal(egyedszam);
-            if (zsakmany is null || zsakmany.Egyedszam() < 0)
+            if (zsakmany is null || zsakmany.Egyedszam() <= 0)
             {
                 egyedszam = egyedszam * 3 / 4;
-                Elovilag.Current().KoloniatEllenoriz(this);
             }
         }
 

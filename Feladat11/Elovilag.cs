@@ -26,24 +26,22 @@
             koloniak.Add(koloniakeszitok[(int)faj].KoloniatKeszit(becenev,egyedszam));
         }
 
-        private bool KoloniaBenneVanE(Kolonia kolonia)
+        private void KoloniakatEllenoriz()
         {
-            bool l = false;
-            var t = koloniak.GetEnumerator();
-            while (!l && t.MoveNext())
-            {
-                Kolonia elem = t.Current;
-                l = elem == kolonia;
-            }
-            return l;
-        }
-
-        public void KoloniatEllenoriz(Kolonia kolonia)
-        {
-            if (kolonia.Egyedszam() < 0 && KoloniaBenneVanE(kolonia))
+            var torlendok = koloniak.Where(k => k.Egyedszam() <= 0).ToList();
+            foreach (Kolonia kolonia in torlendok)
             {
                 koloniak.Remove(kolonia);
             }
+        }
+
+        public void KortVegrehajt(int kor)
+        {
+            foreach (Kolonia k in koloniak)
+            {
+                k.Cselekszik(kor);
+            }
+            KoloniakatEllenoriz();
         }
 
         public IReadOnlyList<Zsakmany> ZsakmanyKoloniak()
@@ -77,6 +75,11 @@
         public IReadOnlyList<Kolonia> Koloniak()
         {
             return koloniak.AsReadOnly();
+        }
+
+        public void Clear()
+        {
+            koloniak.Clear();
         }
     }
 }

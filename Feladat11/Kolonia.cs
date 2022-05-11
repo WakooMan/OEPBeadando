@@ -24,6 +24,10 @@
         public int Egyedszam() { return egyedszam; }
         public virtual void Cselekszik(int kor)
         {
+            if (Egyedszam() <= 0)
+            {
+                return;
+            }
             if (kor % FialKor == 0)
             {
                 Fial();

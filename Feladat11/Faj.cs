@@ -7,6 +7,7 @@
         Nyul=2,
         SarkiRoka = 3,
         Hobagoly = 4,
-        Farkas = 5
+        Farkas = 5,
+        OsszesFaj = 6
     }
 }

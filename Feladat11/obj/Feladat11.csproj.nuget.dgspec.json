@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj": {}
+    "E:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj": {
+    "E:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj",
+        "projectUniqueName": "E:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj",
         "projectName": "Feladat11",
-        "projectPath": "D:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj",
-        "packagesPath": "C:\\Users\\Viktor\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\OEPBeadando\\Feladat11\\obj\\",
+        "projectPath": "E:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj",
+        "packagesPath": "C:\\Users\\vitya\\.nuget\\packages\\",
+        "outputPath": "E:\\Repos\\OEPBeadando\\Feladat11\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Viktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
         }
       }
     }

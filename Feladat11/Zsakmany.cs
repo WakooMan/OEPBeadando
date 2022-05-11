@@ -29,7 +29,6 @@
         public void Reagal(int egyedszam)
         {
             this.egyedszam -= (int)(egyedszam * ((double)VadaszatSzazalek/100));
-            Elovilag.Current().KoloniatEllenoriz(this);
         }
 
         public abstract override Faj Faj();
