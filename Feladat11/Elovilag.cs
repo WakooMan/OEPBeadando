@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Feladat11
+﻿namespace Feladat11
 {
     public class Elovilag
     {
@@ -32,9 +26,21 @@ namespace Feladat11
             koloniak.Add(koloniakeszitok[(int)faj].KoloniatKeszit(becenev,egyedszam));
         }
 
+        private bool KoloniaBenneVanE(Kolonia kolonia)
+        {
+            bool l = false;
+            var t = koloniak.GetEnumerator();
+            while (!l && t.MoveNext())
+            {
+                Kolonia elem = t.Current;
+                l = elem == kolonia;
+            }
+            return l;
+        }
+
         public void KoloniatEllenoriz(Kolonia kolonia)
         {
-            if (kolonia.Egyedszam() < 0 && koloniak.Contains(kolonia))
+            if (kolonia.Egyedszam() < 0 && KoloniaBenneVanE(kolonia))
             {
                 koloniak.Remove(kolonia);
             }
@@ -42,12 +48,30 @@ namespace Feladat11
 
         public IReadOnlyList<Zsakmany> ZsakmanyKoloniak()
         {
-            return koloniak.Where(k => !k.Ragadozo_e()).Select(k => (Zsakmany)k).ToList().AsReadOnly();
+            List<Zsakmany> s = new();
+            var t = koloniak.GetEnumerator();
+            while (t.MoveNext())
+            {
+                if(!t.Current.Ragadozo_e())
+                {
+                    s.Add((Zsakmany)t.Current);
+                }
+            }
+            return s.AsReadOnly();
         }
 
         public IReadOnlyList<Ragadozo> RagadozoKoloniak()
         {
-            return koloniak.Where(k => k.Ragadozo_e()).Select(k => (Ragadozo)k).ToList().AsReadOnly();
+            List<Ragadozo> s = new();
+            var t = koloniak.GetEnumerator();
+            while (t.MoveNext())
+            {
+                if (t.Current.Ragadozo_e())
+                {
+                    s.Add((Ragadozo)t.Current);
+                }
+            }
+            return s.AsReadOnly();
         }
 
         public IReadOnlyList<Kolonia> Koloniak()

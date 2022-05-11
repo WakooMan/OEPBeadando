@@ -10,10 +10,7 @@
         {
             base.Cselekszik(kor);
             Zsakmany? zs = ZsakmanytKeres();
-            if (zs is not null)
-            {
-                ZsakmanytMegtamad(zs);
-            }
+            ZsakmanytMegtamad(zs);
         }
 
         public override bool Ragadozo_e()
@@ -28,13 +25,12 @@
             return (list.Count>0)?list[rnd.Next(list.Count)]:null;
         }
 
-        private void ZsakmanytMegtamad(Zsakmany zsakmany)
+        private void ZsakmanytMegtamad(Zsakmany? zsakmany)
         {
-            zsakmany.Reagal(egyedszam);
-            if (zsakmany.Egyedszam() < 0)
+            zsakmany?.Reagal(egyedszam);
+            if (zsakmany is null || zsakmany.Egyedszam() < 0)
             {
                 egyedszam = egyedszam * 3 / 4;
-                Elovilag.Current().KoloniatEllenoriz(zsakmany);
                 Elovilag.Current().KoloniatEllenoriz(this);
             }
         }

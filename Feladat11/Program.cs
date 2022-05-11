@@ -22,10 +22,10 @@
                     line = reader.ReadLine();
                 }
             }
-            int sum = Elovilag.Current().RagadozoKoloniak().Sum(r => r.Egyedszam());
+            int sum = SumRagadozoEgyedszam();
             int kor = 0;
             Kiir(kor++);
-            while (!Elovilag.Current().RagadozoKoloniak().All(r => r.Egyedszam() < 4) && !(Elovilag.Current().RagadozoKoloniak().Sum(r => r.Egyedszam()) >= 2 * sum))
+            while (!RagadozokKisebbMintNegy() && !(SumRagadozoEgyedszam() >= 2 * sum))
             {
                 for(int i=0;i<Elovilag.Current().Koloniak().Count;i++)
                 {
@@ -34,6 +34,29 @@
                 }
                 Kiir(kor++);
             }
+        }
+
+        private static int SumRagadozoEgyedszam()
+        {
+            int s = 0;
+            var t = Elovilag.Current().RagadozoKoloniak().GetEnumerator();
+            while (t.MoveNext())
+            {
+                s += t.Current.Egyedszam();
+            }
+            return s;
+        }
+
+        private static bool RagadozokKisebbMintNegy()
+        {
+            bool l = true;
+            var t = Elovilag.Current().RagadozoKoloniak().GetEnumerator();
+            while (l && t.MoveNext())
+            {
+                Kolonia elem = t.Current;
+                l = elem.Egyedszam() < 4;
+            }
+            return l;
         }
 
         private static void Kiir(int kor)
