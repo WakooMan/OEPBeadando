@@ -1231,7 +1231,7 @@
 <XPD:REF name="ClientDependencies[0]">x0XnGVrCsEWSF8FrnxkWZwAA</XPD:REF>
 <XPD:ATTR name="#Specializations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Specializations[0]">/U3hIo0LjU6fI9z/xeSPkQAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">8</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">9</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="TwZ2xmqen0av4WL+r9ERNQAA">
 <XPD:ATTR name="Name" type="string">KoloniatHozzaad</XPD:ATTR>
 <XPD:REF name="Owner">Tq2avnTlp0Cz44IdMhKrmgAA</XPD:REF>
@@ -1332,6 +1332,21 @@
 <XPD:ATTR name="Name" type="string">Elovilag</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkProtected</XPD:ATTR>
 <XPD:REF name="Owner">Tq2avnTlp0Cz44IdMhKrmgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[8]" type="UMLOperation" guid="zcaNibL64EOiffom5Q0/WgAA">
+<XPD:ATTR name="Name" type="string">ReadFile</XPD:ATTR>
+<XPD:REF name="Owner">Tq2avnTlp0Cz44IdMhKrmgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="JyQKEatT/kaTuJ7ec7oh6wAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">zcaNibL64EOiffom5Q0/WgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="alqdXT5rGUufatmvmx6R7QAA">
+<XPD:ATTR name="Name" type="string">filename</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">string</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">zcaNibL64EOiffom5Q0/WgAA</XPD:REF>
+</XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#Associations" type="integer">5</XPD:ATTR>
 <XPD:REF name="Associations[0]">IUOz7XI3aUCWENGij1R1+gAA</XPD:REF>

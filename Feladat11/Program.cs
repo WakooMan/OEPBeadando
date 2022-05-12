@@ -4,7 +4,10 @@
     {
         static void Main(string [] args)
         {
-            Tundra.Instance.ReadFile("Input.txt");
+            Console.Write("Adjon meg egy bemeneti fájlt a kolóniák beolvasásához: ");
+            string filename = Console.ReadLine();
+            Console.WriteLine();
+            Tundra.Instance.ReadFile(filename);
             Console.WriteLine(Tundra.Instance);
             while (!Tundra.Instance.SzimulacioVegeE())
             {
