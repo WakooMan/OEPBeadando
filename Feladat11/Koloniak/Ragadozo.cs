@@ -2,7 +2,7 @@
 {
     public abstract class Ragadozo : Kolonia
     {
-        protected Ragadozo(string b, int e,int fsz) : base(b,e,fsz,8)
+        protected Ragadozo(Elovilag elo,string b, int e,int fsz) : base(elo,b,e,fsz,8)
         {
         }
 
@@ -25,7 +25,7 @@
         private Zsakmany? ZsakmanytKeres()
         {
             Random rnd = new Random();
-            var list = Elovilag.Current().ZsakmanyKoloniak().Where(zs => zs.Egyedszam()>0).ToList();
+            var list = elovilag.ZsakmanyKoloniak().Where(zs => zs.Egyedszam()>0).ToList();
             return (list.Count>0)?list[rnd.Next(list.Count)]:null;
         }
 

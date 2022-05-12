@@ -6,13 +6,15 @@
         protected int egyedszam;
         private int FialKor;
         private int FialSzazalek;
+        protected Elovilag elovilag;
 
-        protected Kolonia(string b, int e,int fsz,int fk)
+        protected Kolonia(Elovilag elo,string b, int e,int fsz,int fk)
         {
             becenev = b;
             egyedszam = e;
             FialSzazalek = fsz;
             FialKor = fk;
+            elovilag = elo;
         }
 
         private void Fial()

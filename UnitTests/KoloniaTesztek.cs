@@ -18,7 +18,7 @@ namespace UnitTests
             Faj i = Faj.Lemming;
             while(l && i < Faj.Farkas)
             {
-                var kolonia = koloniakeszitok[(int)i].KoloniatKeszit($"Kolonia{i+1}",((int)i+1)*10);
+                var kolonia = koloniakeszitok[(int)i].KoloniatKeszit(null, $"Kolonia{i + 1}",((int)i + 1) * 10);
                 l = ((kolonia.Ragadozo_e() && i >= Faj.SarkiRoka) || (!kolonia.Ragadozo_e() && i < Faj.SarkiRoka)) && kolonia.Egyedszam() == ((int)i + 1) * 10 && kolonia.Becenev() == $"Kolonia{i + 1}" && kolonia.Faj() == i;
                 i++;
             }
@@ -28,23 +28,24 @@ namespace UnitTests
         [TestMethod]
         public void MegtamadosTeszt()
         {
+            Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.OsszesFaj;i++)
             {
-                Elovilag.Current().KoloniatHozzaad($"Kolonia{i + 1}",i,(i >= Faj.SarkiRoka)?10:60);
+                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}",i,(i >= Faj.SarkiRoka)?10:60);
             }
             MethodInfo ZsakmanytMegtamad = typeof(Ragadozo).GetMethod("ZsakmanytMegtamad", BindingFlags.Instance | BindingFlags.NonPublic);
             int[] ElozoEgyedszamok = new int[3];
             int[] Kivonandok = new int[3] { 40,20,20};
             for (int i = 0; i < 3; i++)
             {
-                ElozoEgyedszamok[i] = Elovilag.Current().ZsakmanyKoloniak()[i].Egyedszam();
-                ZsakmanytMegtamad.Invoke(Elovilag.Current().RagadozoKoloniak()[i], new object[] { Elovilag.Current().ZsakmanyKoloniak()[i] });
+                ElozoEgyedszamok[i] = Tundra.Instance.ZsakmanyKoloniak()[i].Egyedszam();
+                ZsakmanytMegtamad.Invoke(Tundra.Instance.RagadozoKoloniak()[i], new object[] { Tundra.Instance.ZsakmanyKoloniak()[i] });
             }
             bool l = true;
             int j = 0;
             while (l && j < 3)
             {
-                l = Elovilag.Current().ZsakmanyKoloniak()[j].Egyedszam() == ElozoEgyedszamok[j] - Kivonandok[j];
+                l = Tundra.Instance.ZsakmanyKoloniak()[j].Egyedszam() == ElozoEgyedszamok[j] - Kivonandok[j];
                 j++;
             }
             Assert.IsTrue(l);
@@ -53,37 +54,38 @@ namespace UnitTests
         [TestMethod]
         public void ZsakmanyokTorlodnek()
         {
-            Elovilag.Current().Clear();
+            Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.OsszesFaj; i++)
             {
-                Elovilag.Current().KoloniatHozzaad($"Kolonia{i + 1}", i, (i >= Faj.SarkiRoka) ? 10 : 20);
+                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}", i, (i >= Faj.SarkiRoka) ? 10 : 20);
             }
-            Elovilag.Current().KortVegrehajt(1);
-            Assert.IsTrue(Elovilag.Current().ZsakmanyKoloniak().Count == 0);
+            Tundra.Instance.KortVegrehajt();
+            Tundra.Instance.KortVegrehajt();
+            Assert.IsTrue(Tundra.Instance.ZsakmanyKoloniak().Count == 0);
         }
         [TestMethod]
         public void RagadozokEhenHalnak()
         {
-            Elovilag.Current().Clear();
+            Tundra.Instance.Clear();
             for (Faj i = Faj.SarkiRoka; i < Faj.OsszesFaj; i++)
             {
-                Elovilag.Current().KoloniatHozzaad($"Kolonia{i + 1}", i, 10);
+                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}", i, 10);
             }
-            for (int i = 1; i <= 6; i++) 
+            for (int i = 0; i <= 7; i++) 
             {
-                Elovilag.Current().KortVegrehajt(i); 
+                Tundra.Instance.KortVegrehajt(); 
             }
-            Assert.IsTrue(Elovilag.Current().RagadozoKoloniak().Count == 0);
+            Assert.IsTrue(Tundra.Instance.RagadozoKoloniak().Count == 0);
         }
         [TestMethod]
         public void ZsakmanyokFialnak()
         {
-            Elovilag.Current().Clear();
+            Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.SarkiRoka; i++)
             {
-                Elovilag.Current().KoloniatHozzaad($"Kolonia{i + 1}", i, 10);
+                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}", i, 10);
             }
-            foreach (Kolonia kolonia in Elovilag.Current().Koloniak())
+            foreach (Kolonia kolonia in Tundra.Instance.Koloniak())
             {
                 int FialKor = (int)typeof(Kolonia).GetField("FialKor",BindingFlags.Instance | BindingFlags.NonPublic).GetValue(kolonia);
                 int ElozoEgyedszam = kolonia.Egyedszam();
@@ -94,12 +96,12 @@ namespace UnitTests
         [TestMethod]
         public void RagadozokFialnak()
         {
-            Elovilag.Current().Clear();
+            Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.OsszesFaj; i++)
             {
-                Elovilag.Current().KoloniatHozzaad($"Kolonia{i + 1}", i, (i >= Faj.SarkiRoka) ? 10 : 60);
+                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}", i, (i >= Faj.SarkiRoka) ? 10 : 60);
             }
-            foreach (Ragadozo kolonia in Elovilag.Current().RagadozoKoloniak())
+            foreach (Ragadozo kolonia in Tundra.Instance.RagadozoKoloniak())
             {
                 int FialKor = (int)typeof(Kolonia).GetField("FialKor", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(kolonia);
                 int ElozoEgyedszam = kolonia.Egyedszam();

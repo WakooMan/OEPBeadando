@@ -5,7 +5,12 @@
       "ProjectGuid": "969f54f7-6ea0-4378-a652-ef27345332a2",
       "DisplayName": "Feladat11",
       "ColorIndex": 0
+    },
+    "7510dfa1-7a11-4702-9e59-9dd77e15936c": {
+      "ProjectGuid": "7510dfa1-7a11-4702-9e59-9dd77e15936c",
+      "DisplayName": "UnitTests",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

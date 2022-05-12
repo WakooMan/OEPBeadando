@@ -5,7 +5,7 @@
         private int MaxEgyedszam;
         private int MinEgyedszam;
         private int VadaszatSzazalek;
-        public Zsakmany(string b, int e,int fsz, int fk, int maxe,int mine,int vadsz) : base(b, e,fsz,fk)
+        public Zsakmany(Elovilag elo,string b, int e,int fsz, int fk, int maxe,int mine,int vadsz) : base(elo, b, e,fsz,fk)
         {
             MaxEgyedszam = maxe;
             MinEgyedszam = mine;

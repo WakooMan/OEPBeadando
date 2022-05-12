@@ -2,7 +2,7 @@
 {
     public class Hobagoly : Ragadozo
     {
-        public Hobagoly(string b, int e) : base(b, e,125)
+        public Hobagoly(Elovilag elo,string b, int e) : base(elo,b, e,125)
         {
         }
 

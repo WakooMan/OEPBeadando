@@ -2,7 +2,7 @@
 {
     public class Farkas : Ragadozo
     {
-        public Farkas(string b, int e) : base(b, e,150)
+        public Farkas(Elovilag elo,string b, int e) : base(elo,b, e,150)
         {
         }
 

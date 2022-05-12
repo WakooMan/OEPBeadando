@@ -2,7 +2,7 @@
 {
     public class Nyul : Zsakmany
     {
-        public Nyul(string b, int e) : base(b, e,150,2,100,20,200)
+        public Nyul(Elovilag elo,string b, int e) : base(elo, b, e,150,2,100,20,200)
         {
         }
 
