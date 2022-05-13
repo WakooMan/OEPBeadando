@@ -52,7 +52,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ZsakmanyokTorlodnek()
+        public void ZsakmanyokTorlodnekTeszt()
         {
             Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.OsszesFaj; i++)
@@ -64,7 +64,7 @@ namespace UnitTests
             Assert.IsTrue(Tundra.Instance.ZsakmanyKoloniak().Count == 0);
         }
         [TestMethod]
-        public void RagadozokEhenHalnak()
+        public void RagadozokEhenHalnakTeszt()
         {
             Tundra.Instance.Clear();
             for (Faj i = Faj.SarkiRoka; i < Faj.OsszesFaj; i++)
@@ -78,7 +78,7 @@ namespace UnitTests
             Assert.IsTrue(Tundra.Instance.RagadozoKoloniak().Count == 0);
         }
         [TestMethod]
-        public void ZsakmanyokFialnak()
+        public void ZsakmanyokFialnakTeszt()
         {
             Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.SarkiRoka; i++)
@@ -94,12 +94,12 @@ namespace UnitTests
             }
         }
         [TestMethod]
-        public void RagadozokFialnak()
+        public void RagadozokFialnakTeszt()
         {
             Tundra.Instance.Clear();
             for (Faj i = Faj.Lemming; i < Faj.OsszesFaj; i++)
             {
-                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}", i, (i >= Faj.SarkiRoka) ? 10 : 60);
+                Tundra.Instance.KoloniatHozzaad($"Kolonia{i + 1}", i, (i >= Faj.SarkiRoka) ? 10 : 120);
             }
             foreach (Ragadozo kolonia in Tundra.Instance.RagadozoKoloniak())
             {

@@ -1792,12 +1792,11 @@
       ]
     },
     "Microsoft.CSharp/4.0.1": {
-      "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
+      "sha512": "FYtZ/fVdWIHUyNaPMQKgIt+lQfYZ0Gd6tkRxao7xwI+acgrcgnEgSoXcL+GYITv/Xs9XVh/N9VtuMjBHKLfd8w==",
       "type": "package",
       "path": "microsoft.csharp/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3556,12 +3555,11 @@
       ]
     },
     "System.Dynamic.Runtime/4.0.11": {
-      "sha512": "db34f6LHYM0U0JpE+sOmjar27BnqTVkbLJhgfwMpTdgTigG/Hna3m2MYVwnFzGGKnEJk2UXFuoVTr8WUbU91/A==",
+      "sha512": "DyIQhYhCjYv0Oy6aNjVOnpnHSl/0UGLeeamgNKVrczC/aYteuRDm0yivyUHrhFzZ1FjH9R14Vk7uCpJmPnRfJg==",
       "type": "package",
       "path": "system.dynamic.runtime/4.0.11",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6220,19 +6218,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Viktor\\.nuget\\packages\\": {}
+    "C:\\Users\\vitya\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\OEPBeadando\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "E:\\Repos\\OEPBeadando\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "D:\\Repos\\OEPBeadando\\UnitTests\\UnitTests.csproj",
-      "packagesPath": "C:\\Users\\Viktor\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\OEPBeadando\\UnitTests\\obj\\",
+      "projectPath": "E:\\Repos\\OEPBeadando\\UnitTests\\UnitTests.csproj",
+      "packagesPath": "C:\\Users\\vitya\\.nuget\\packages\\",
+      "outputPath": "E:\\Repos\\OEPBeadando\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Viktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6246,8 +6248,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj": {
-              "projectPath": "D:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj"
+            "E:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj": {
+              "projectPath": "E:\\Repos\\OEPBeadando\\Feladat11\\Feladat11.csproj"
             }
           }
         }
@@ -6294,7 +6296,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,7 +13,7 @@
             Fajok.Add("s", Faj.SarkiRoka);
             Fajok.Add("u", Faj.Urge);
         }
-        public int Kor;
+        private int Kor;
         private int SumKezdetnel;
         private KoloniaKeszito[] koloniakeszitok;
         private List<Kolonia> koloniak;
